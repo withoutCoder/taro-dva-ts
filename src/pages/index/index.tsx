@@ -45,7 +45,10 @@ export default class Index extends React.Component {
     ];
     return (
       <view className="content">
+        <view className="at-article__h2">正在进行</view>
         <ItemList itemList={itemList} type={HonorType.HONOR_IN_PROGRESS} />
+        <view className="at-article__h2">荣誉回顾</view>
+        <ItemList itemList={itemList} type={HonorType.HONOR_REVIEW} />
       </view>
     );
   }

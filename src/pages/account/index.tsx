@@ -1,12 +1,12 @@
+import Taro from '@tarojs/taro';
 import React, { ComponentClass } from 'react';
-import { View } from '@tarojs/components';
 import { connect } from 'react-redux';
 
 import { StateType } from '../../models/accountModel';
 import { ConnectProps, ConnectState } from '../../models/connect';
 
 import './index.scss';
-import { RectWrap } from '../../components/RectWrap';
+import { AtAvatar } from 'taro-ui';
 
 interface OwnProps {
   // 父组件要传的prop放这
@@ -26,11 +26,15 @@ class Account extends React.Component<IProps, OwnState> {
     console.log(this.props.accountState);
   }
   render() {
-    const { value } = this.props;
     return (
-      <View className="account-page">
-        <RectWrap title="Taro account页面">{value || 'account'}</RectWrap>
-      </View>
+      <view className="account-page">
+        <view className="account-msg-card">
+          <AtAvatar className="at-avatar" circle={true} size="large" image="https://jdc.jd.com/img/200" />
+          <view className="account-name">王狗蛋</view>
+        </view>
+        <view className="tools-card"></view>
+        <view className="tools-card"></view>
+      </view>
     );
   }
 }

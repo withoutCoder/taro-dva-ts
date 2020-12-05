@@ -34,13 +34,9 @@ export default class ItemList extends React.Component<Props> {
       }
       case HonorType.HONOR_REVIEW: {
         const list = itemList.map((item, index) => {
-          return (
-            <view key={index}>
-              <HonorReviewItem item={item} />
-            </view>
-          );
+          return <HonorReviewItem key={index} item={item} />;
         });
-        return <view>{list}</view>;
+        return <view className="review-item-box">{list}</view>;
       }
     }
   }

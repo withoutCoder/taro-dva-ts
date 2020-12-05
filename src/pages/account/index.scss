@@ -1,1 +1,47 @@
 @import '../../static/css/mixin';
+
+page {
+  height: 100%;
+  background-color: #ecefef;
+}
+
+.account-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.account-msg-card {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 90%;
+  height: 250px;
+  border-radius: 20px;
+  margin-left: 5%;
+  margin-top: 30px;
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.tools-card {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 90%;
+  height: 400px;
+  border-radius: 20px;
+  margin-left: 5%;
+  margin-top: 30px;
+  background: white;
+  flex-direction: column;
+}
+
+.at-avatar {
+  margin: 30px;
+}
+
+.account-name {
+  margin: 35px 30px 30px 10px;
+  color: #333333;
+}

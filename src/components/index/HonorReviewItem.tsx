@@ -1,13 +1,24 @@
 import Taro from '@tarojs/taro';
 import PropTypes from 'prop-types';
-import { View } from '@tarojs/components';
 import React from 'react';
+import { AtAccordion, AtList } from 'taro-ui';
 
 interface Props {
   item: any;
 }
 
-export default class HonorReviewItem extends React.Component<Props> {
+interface State {
+  open: boolean;
+}
+
+export default class HonorReviewItem extends React.Component<Props, State> {
+  constructor(data) {
+    super(data);
+    this.state = {
+      open: true
+    };
+  }
+
   static propTypes = {
     item: PropTypes.object
   };
@@ -16,17 +27,22 @@ export default class HonorReviewItem extends React.Component<Props> {
     item: null
   };
 
+  handleClick(value: boolean) {
+    this.setState({
+      open: value
+    });
+  }
+
   render() {
-    const { item } = this.props;
-    if (!item) return <View />;
+    const { open } = this.state;
     return (
-      // <View className='content'>
-      //   {item.title}
-      // </View>
-      <View>
-        <div className="cardUp"></div>
-        <div className="cardBottom"></div>
-      </View>
+      <AtAccordion className="review-card" open={open} onClick={this.handleClick.bind(this)} title="AMS 突出快乐奖">
+        <AtList hasBorder={false}>
+          <view className="review-honor-team">快乐风男团队</view>
+          <view className="review-honor-team">守望先锋娱乐晚间细纹团队</view>
+          <view className="review-honor-team">这是一个名字特别特别特别长的团队</view>
+        </AtList>
+      </AtAccordion>
     );
   }
 }
