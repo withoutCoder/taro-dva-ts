@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, Text } from '@tarojs/components';
+import Taro from '@tarojs/taro';
 import './index.scss';
+import ItemList from '../../components/index/ItemList';
+import { HonorType } from '../../models/honor';
 
 export default class Index extends React.Component {
   componentWillMount() {}
@@ -14,10 +16,37 @@ export default class Index extends React.Component {
   componentDidHide() {}
 
   render() {
+    const itemList = [
+      {
+        title: '奖项 ETS 激励计划',
+        description: 'description',
+        endData: '2020-12-12'
+      },
+      {
+        title: '奖项 ETS 激励计划',
+        description: 'description',
+        endData: '2020-12-12'
+      },
+      {
+        title: '奖项 ETS 激励计划',
+        description: 'description',
+        endData: '2020-12-12'
+      },
+      {
+        title: '奖项 ETS 激励计划',
+        description: 'description',
+        endData: '2020-12-12'
+      },
+      {
+        title: '奖项 ETS 激励计划',
+        description: 'description',
+        endData: '2020-12-12'
+      }
+    ];
     return (
-      <View className="index">
-        <Text>Hello world! hahah</Text>
-      </View>
+      <view className="content">
+        <ItemList itemList={itemList} type={HonorType.HONOR_IN_PROGRESS} />
+      </view>
     );
   }
 }

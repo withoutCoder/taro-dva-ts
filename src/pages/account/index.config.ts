@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: 'account'
+  navigationBarTitleText: '我的账户'
 };

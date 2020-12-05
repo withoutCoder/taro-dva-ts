@@ -1,4 +1,5 @@
 import React from 'react';
+import Taro from '@tarojs/taro';
 import { Provider } from 'react-redux';
 import dva from './utils/dva';
 import models from './models';
