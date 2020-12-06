@@ -12,5 +12,6 @@ export enum HonorType {
 
 export enum HonorStatus {
   HONOR_DECLARING = '申报中',
-  HONOR_OVER = '已结束'
+  HONOR_ANNOUNCED = '已公布',
+  HONOR_UNDER_REVIEW = '评审中'
 }

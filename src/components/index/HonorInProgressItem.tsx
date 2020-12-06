@@ -24,17 +24,21 @@ export default class HonorInProgressItem extends React.Component<Props> {
     const statusBackgroundColor = () => {
       switch (item.status) {
         case HonorStatus.HONOR_DECLARING:
-          return '#5c91fd';
-        case HonorStatus.HONOR_OVER:
-          return '#e8e8e8';
+          return '#f8f2e9';
+        case HonorStatus.HONOR_ANNOUNCED:
+          return '#def3d4';
+        case HonorStatus.HONOR_UNDER_REVIEW:
+          return '#f3cfc7';
       }
     };
     const statusFontColor = () => {
       switch (item.status) {
         case HonorStatus.HONOR_DECLARING:
-          return '#ffffff';
-        case HonorStatus.HONOR_OVER:
-          return '#333333';
+          return '#D1AF7C';
+        case HonorStatus.HONOR_ANNOUNCED:
+          return '#90CC70';
+        case HonorStatus.HONOR_UNDER_REVIEW:
+          return '#E66B55';
       }
     };
     return (
@@ -49,7 +53,6 @@ export default class HonorInProgressItem extends React.Component<Props> {
               customStyle={{ background: statusBackgroundColor(), color: statusFontColor() }}
               size="small"
               type="primary"
-              circle
             >
               {item.status}
             </AtTag>

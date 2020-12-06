@@ -46,13 +46,13 @@ export default class Index extends React.Component<Props, State> {
           title: '奖项 ETS 激励计划',
           season: '2020 Q2',
           endDate: '2020-11-12',
-          status: HonorStatus.HONOR_OVER
+          status: HonorStatus.HONOR_ANNOUNCED
         },
         {
           title: 'AMS 特别沙雕奖以及特别神经奖以及特别长',
           season: '2020 Q3',
           endDate: '2020-10-12',
-          status: HonorStatus.HONOR_DECLARING
+          status: HonorStatus.HONOR_UNDER_REVIEW
         },
         {
           title: 'AMS 特别沙雕奖以及特别神经奖以及特别长',
@@ -64,7 +64,7 @@ export default class Index extends React.Component<Props, State> {
           title: '奖项 ETS 激励计划',
           season: '2020 Q4',
           endDate: '2020-12-21',
-          status: HonorStatus.HONOR_DECLARING
+          status: HonorStatus.HONOR_UNDER_REVIEW
         }
       ]
     });
