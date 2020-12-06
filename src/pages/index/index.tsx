@@ -74,7 +74,7 @@ export default class Index extends React.Component<Props, State> {
     this.setState({
       honorReviewList: [
         {
-          title: '奖项 ETS 激励计划',
+          title: 'AMS 特别沙雕奖以及特别神经奖',
           honorTeams: [
             {
               teamName: '快乐风男团队',
@@ -87,7 +87,7 @@ export default class Index extends React.Component<Props, State> {
           ]
         },
         {
-          title: '奖项 ETS 激励计划',
+          title: '腾讯特别贡献人民币充值奖',
           honorTeams: [
             {
               teamName: '快乐风男团队',
@@ -100,7 +100,7 @@ export default class Index extends React.Component<Props, State> {
           ]
         },
         {
-          title: '奖项 ETS 激励计划',
+          title: '爱情不来找我我就不去找他奖',
           honorTeams: [
             {
               teamName: '快乐风男团队',

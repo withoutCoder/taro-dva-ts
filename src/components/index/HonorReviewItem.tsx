@@ -47,7 +47,7 @@ export default class HonorReviewItem extends React.Component<Props, State> {
     };
     const { open } = this.state;
     return (
-      <AtAccordion className="review-card" open={open} onClick={this.handleClick.bind(this)} title={item.title}>
+      <AtAccordion className="review-card" hasBorder={false} open={open} onClick={this.handleClick.bind(this)} title={item.title}>
         <AtList hasBorder={false}>{teamList()}</AtList>
       </AtAccordion>
     );

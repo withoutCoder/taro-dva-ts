@@ -1,6 +1,6 @@
 page {
   height: 100%;
-  background-color: #ecefef;
+  background-color: #e5e5e5;
 }
 
 .content {
@@ -44,6 +44,10 @@ page {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background: white;
+}
+
+.card-bottom:active {
+  background: #f8f8f8;
 }
 
 .card-title {
@@ -92,19 +96,21 @@ page {
   margin-left: 3.3%;
   margin-top: 30px;
   background: white;
-  padding-left: 30px;
-  padding-right: 30px;
 }
 
 .review-honor-team {
-  padding: 28px 20px;
+  padding: 20px;
   white-space: nowrap;
   overflow: hidden;
+  font-weight: normal;
   text-overflow: ellipsis;
-  font-weight: lighter;
-  font-size: 80%;
-  color: #555555;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #ecefef;
+  font-size: 90%;
+  color: #333333;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #ecefef;
+}
+
+.review-honor-team:active {
+  background: #f5f5f5;
 }

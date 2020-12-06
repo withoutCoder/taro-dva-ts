@@ -26,9 +26,9 @@ export default class HonorInProgressItem extends React.Component<Props> {
         case HonorStatus.HONOR_DECLARING:
           return '#f8f2e9';
         case HonorStatus.HONOR_ANNOUNCED:
-          return '#def3d4';
+          return '#e3f3db';
         case HonorStatus.HONOR_UNDER_REVIEW:
-          return '#f3cfc7';
+          return '#f5dfda';
       }
     };
     const statusFontColor = () => {
