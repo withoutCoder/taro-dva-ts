@@ -15,7 +15,7 @@ export default class HonorReviewItem extends React.Component<Props, State> {
   constructor(data) {
     super(data);
     this.state = {
-      open: true
+      open: false
     };
   }
 
@@ -34,14 +34,21 @@ export default class HonorReviewItem extends React.Component<Props, State> {
   }
 
   render() {
+    const { item } = this.props;
+    if (!item) return <view />;
+    const teamList = () => {
+      return item.honorTeams.map((item) => {
+        return (
+          <view className="review-honor-team" key={item.teamId}>
+            {item.teamName}
+          </view>
+        );
+      });
+    };
     const { open } = this.state;
     return (
-      <AtAccordion className="review-card" open={open} onClick={this.handleClick.bind(this)} title="AMS 突出快乐奖">
-        <AtList hasBorder={false}>
-          <view className="review-honor-team">快乐风男团队</view>
-          <view className="review-honor-team">守望先锋娱乐晚间细纹团队</view>
-          <view className="review-honor-team">这是一个名字特别特别特别长的团队</view>
-        </AtList>
+      <AtAccordion className="review-card" open={open} onClick={this.handleClick.bind(this)} title={item.title}>
+        <AtList hasBorder={false}>{teamList()}</AtList>
       </AtAccordion>
     );
   }
