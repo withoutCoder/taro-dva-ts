@@ -48,12 +48,7 @@ export default class HonorInProgressItem extends React.Component<Props> {
           <view className="card-title">{item.title}</view>
           <view className="at-row">
             <view className="at-col at-col-5 card-season">{item.season}</view>
-            <AtTag
-              className="card-status"
-              customStyle={{ background: statusBackgroundColor(), color: statusFontColor() }}
-              size="small"
-              type="primary"
-            >
+            <AtTag className="card-status" customStyle={{ background: statusBackgroundColor(), color: statusFontColor() }} size="small">
               {item.status}
             </AtTag>
           </view>
