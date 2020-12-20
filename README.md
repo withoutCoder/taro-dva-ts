@@ -1,15 +1,3 @@
-# 脚手架
-
-命令行快速生成模板页面
-npm tpl 'page-name'
-
-自动从iconfont更新
-npm icon 'iconfont下载链接后缀'
-
-node >= 12.0.0
-
-Taro >= v3.0.9
-
 # 技术栈
 
 React + Taro + Dva + Scss + typeScript
@@ -22,7 +10,7 @@ React + Taro + Dva + Scss + typeScript
 
 ```
 
-cd taro-dva-ts
+cd remindWeapp
 
 # 安装项目依赖
 yarn
@@ -48,8 +36,6 @@ npm run dev:h5
 # React Native
 npm run dev:rn
 
-# pages模版快速生成
-npm run tpl `文件名`
 
 ```
 

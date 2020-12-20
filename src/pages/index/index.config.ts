@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: 'AMS 荣誉激励'
+  navigationBarTitleText: '重要的人'
 };

@@ -1,43 +1,23 @@
 import Taro from '@tarojs/taro';
-import PropTypes from 'prop-types';
 
-import HonorInProgressItem from './HonorInProgressItem';
-import HonorReviewItem from './HonorReviewItem';
-import { Honor, HonorType } from '../../models/honor';
+import CardItem from './CardItem';
 import React from 'react';
+import { Person } from '../../models/person';
 
-interface Props {
-  itemList: Honor[];
-  type: any;
-}
+type Props = {
+  itemList: Person[];
+};
 
-export default class ItemList extends React.Component<Props> {
-  static propTypes = {
-    type: HonorType,
-    itemList: PropTypes.array
+const ItemList: React.FC<Props> = (props: Props) => {
+  const renderDom = () => {
+    const { itemList } = props;
+
+    const list = itemList.map((item, index) => {
+      return <CardItem key={index} item={item} />;
+    });
+    return <view className="item-box">{list}</view>;
   };
 
-  static defaultProps = {
-    itemList: []
-  };
-
-  componentWillMount() {}
-
-  render() {
-    const { itemList, type } = this.props;
-    switch (type) {
-      case HonorType.HONOR_IN_PROGRESS: {
-        const list = itemList.map((item, index) => {
-          return <HonorInProgressItem key={index} item={item} />;
-        });
-        return <view className="item-box">{list}</view>;
-      }
-      case HonorType.HONOR_REVIEW: {
-        const list = itemList.map((item, index) => {
-          return <HonorReviewItem key={index} item={item} />;
-        });
-        return <view className="review-item-box">{list}</view>;
-      }
-    }
-  }
-}
+  return renderDom();
+};
+export default ItemList;

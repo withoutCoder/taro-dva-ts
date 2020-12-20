@@ -2,21 +2,19 @@ import React from 'react';
 import Taro from '@tarojs/taro';
 import './index.scss';
 import ItemList from '../../components/index/ItemList';
-import { Honor, HonorStatus, HonorType } from '../../models/honor';
+import { Person, Tag } from '../../models/person';
 
 interface Props {}
 
 interface State {
-  honorInProgressList: Honor[];
-  honorReviewList: any;
+  cardList: Person[];
 }
 
 export default class Index extends React.Component<Props, State> {
   constructor(data) {
     super(data);
     this.state = {
-      honorInProgressList: [],
-      honorReviewList: []
+      cardList: []
     };
   }
 
@@ -24,106 +22,42 @@ export default class Index extends React.Component<Props, State> {
 
   componentDidMount() {
     this.getHonorInProgressList();
-    this.getHonorReviewList();
   }
-
-  componentWillUnmount() {}
-
-  componentDidShow() {}
-
-  componentDidHide() {}
 
   getHonorInProgressList() {
     this.setState({
-      honorInProgressList: [
+      cardList: [
         {
-          title: 'AMS 特别沙雕奖以及特别神经奖以及特别长',
-          season: '2020 Q1',
-          endDate: '2020-12-12',
-          status: HonorStatus.HONOR_DECLARING
+          name: '爸爸',
+          status: Tag.RELATIVES,
+          picUrl: 'http://p2.ifengimg.com/a/2019_24/4936dac22a0ea46_size355_w1920_h1255.jpg'
         },
         {
-          title: '奖项 ETS 激励计划',
-          season: '2020 Q2',
-          endDate: '2020-11-12',
-          status: HonorStatus.HONOR_ANNOUNCED
+          name: '妈妈',
+          status: Tag.LOVER,
+          picUrl: 'https://cw1.tw/CP/images/article/P1418971976422.jpg'
         },
         {
-          title: 'AMS 特别沙雕奖以及特别神经奖以及特别长',
-          season: '2020 Q3',
-          endDate: '2020-10-12',
-          status: HonorStatus.HONOR_UNDER_REVIEW
+          name: '老姐',
+          status: Tag.FRIEND,
+          picUrl: 'http://m.imeitou.com/uploads/allimg/2019082012/t5mhh2bbfk4.jpg'
         },
         {
-          title: 'AMS 特别沙雕奖以及特别神经奖以及特别长',
-          season: '2020 Q1',
-          endDate: '2020-12-15',
-          status: HonorStatus.HONOR_DECLARING
-        },
-        {
-          title: '奖项 ETS 激励计划',
-          season: '2020 Q4',
-          endDate: '2020-12-21',
-          status: HonorStatus.HONOR_UNDER_REVIEW
-        }
-      ]
-    });
-  }
-
-  getHonorReviewList() {
-    this.setState({
-      honorReviewList: [
-        {
-          title: 'AMS 特别沙雕奖以及特别神经奖',
-          honorTeams: [
-            {
-              teamName: '快乐风男团队',
-              teamId: ''
-            },
-            {
-              teamName: '守望先锋娱乐晚间细纹团队',
-              teamId: ''
-            }
-          ]
-        },
-        {
-          title: '腾讯特别贡献人民币充值奖',
-          honorTeams: [
-            {
-              teamName: '快乐风男团队',
-              teamId: ''
-            },
-            {
-              teamName: '守望先锋娱乐晚间细纹团队',
-              teamId: ''
-            }
-          ]
-        },
-        {
-          title: '爱情不来找我我就不去找他奖',
-          honorTeams: [
-            {
-              teamName: '快乐风男团队',
-              teamId: ''
-            },
-            {
-              teamName: '守望先锋娱乐晚间细纹团队',
-              teamId: ''
-            }
-          ]
+          name: '女朋友',
+          status: Tag.LOVER,
+          picUrl: 'http://m.imeitou.com/uploads/allimg/2019082012/zafffbr2rfm.jpg'
         }
       ]
     });
   }
 
   render() {
-    const { honorReviewList, honorInProgressList } = this.state;
+    const { cardList } = this.state;
     return (
       <view className="content">
-        <view className="at-article__h2">正在进行</view>
-        <ItemList itemList={honorInProgressList} type={HonorType.HONOR_IN_PROGRESS} />
-        <view className="at-article__h2">荣誉回顾</view>
-        <ItemList itemList={honorReviewList} type={HonorType.HONOR_REVIEW} />
+        <view className="panel">
+          <ItemList itemList={cardList} />
+        </view>
       </view>
     );
   }

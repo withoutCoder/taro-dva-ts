@@ -1,8 +1,8 @@
 export default {
-  pages: ['pages/index/index', 'pages/account/index'],
+  pages: ['pages/index/index', 'pages/account/index', 'pages/reminds/index'],
   window: {
     backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#D1AF7C',
+    navigationBarBackgroundColor: '#91d1ff',
     navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black'
   },
@@ -10,7 +10,7 @@ export default {
     list: [
       {
         pagePath: 'pages/index/index',
-        text: '激励列表',
+        text: '重要的人',
         iconPath: './static/images/index.png',
         selectedIconPath: './static/images/index_active.png'
       },
