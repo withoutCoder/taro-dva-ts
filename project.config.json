@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "taro-dva-ts",
-  "description": "taro-dva-typescript脚手架",
+  "projectname": "reminds",
+  "description": "小程序",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,

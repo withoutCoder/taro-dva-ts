@@ -34,7 +34,7 @@ export default class Index extends React.Component<Props, State> {
         },
         {
           name: '妈妈',
-          status: Tag.LOVER,
+          status: Tag.RELATIVES,
           picUrl: 'https://cw1.tw/CP/images/article/P1418971976422.jpg'
         },
         {

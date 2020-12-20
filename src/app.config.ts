@@ -1,5 +1,5 @@
 export default {
-  pages: ['pages/index/index', 'pages/account/index', 'pages/reminds/index'],
+  pages: ['pages/index/index', 'pages/account/index', 'pages/reminds/index', 'pages/add-important-man/index'],
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#91d1ff',

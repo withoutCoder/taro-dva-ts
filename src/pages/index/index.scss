@@ -120,16 +120,27 @@ page {
 }
 
 .panel {
-  flex-shrink: 0;
-  box-sizing: border-box;
   width: 90%;
   border-radius: 20px;
   margin-left: 5%;
   margin-top: 30px;
   background: #eff8ff;
-  flex-direction: column;
   -moz-box-shadow: 2px 2px 5px #51a7d9;
   -webkit-box-shadow: 2px 2px 5px #51a7d9;
   box-shadow: 2px 2px 5px #51a7d9;
   margin-bottom: 30px;
+}
+
+.card-add {
+  width: 45%;
+  height: 300px;
+  line-height: 300px;
+  border-radius: 20px;
+  margin-left: 3.3%;
+  margin-top: 30px;
+  background: #ffffff;
+  -moz-box-shadow: 2px 2px 5px #cccccc;
+  -webkit-box-shadow: 2px 2px 5px #cccccc;
+  box-shadow: 1px 2px 5px #cccccc;
+  text-align: center;
 }

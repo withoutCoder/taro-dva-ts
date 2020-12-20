@@ -1,11 +1,23 @@
 import Taro from '@tarojs/taro';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.scss';
 import { AtSwitch } from 'taro-ui';
+import { getCurrentInstance } from '@tarojs/taro';
+import { Image } from '@tarojs/components';
 
 const Index: React.FC = () => {
   // const [remindList, setRemindList] = useState<any>([]);
   const [open, setOpen] = useState(false);
+  const [picUrl, setPicUrl] = useState<any>('');
+
+  useEffect(() => {
+    if (getCurrentInstance() != null && getCurrentInstance().router) {
+      // @ts-ignore
+      const params = getCurrentInstance().router.params;
+      const { picUrl } = params;
+      picUrl && setPicUrl(params.picUrl);
+    }
+  });
 
   const handleChange = (value) => {
     setOpen(value);
@@ -15,7 +27,7 @@ const Index: React.FC = () => {
     <view className="content">
       <view className="remind-panel">
         <view className="at-row at-row__justify--between">
-          <view className="avatar"></view>
+          <Image className="avatar" src={picUrl} mode="aspectFill" />
           <view className="text-desc">她的微笑是我世界的解药</view>
         </view>
         <view className="remind-box">

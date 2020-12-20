@@ -10,8 +10,9 @@ type Props = {
 
 const CardItem: React.FC<Props> = (props: Props) => {
   const onCardClick = () => {
+    const { item } = props;
     Taro.navigateTo({
-      url: `/pages/reminds/index`
+      url: `/pages/reminds/index?picUrl=${item.picUrl}`
     });
   };
 
