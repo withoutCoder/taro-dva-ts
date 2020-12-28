@@ -1,4 +1,3 @@
-import Taro from '@tarojs/taro';
 import React, { useEffect, useState } from 'react';
 import './index.scss';
 import { AtSwitch } from 'taro-ui';
